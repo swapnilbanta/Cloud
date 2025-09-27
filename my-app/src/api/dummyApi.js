@@ -3,6 +3,7 @@ import shirt1 from "../assets/shirt1.jpg";
 import shirt2 from "../assets/shirt2.jpg";
 import shirt3 from "../assets/shirt3.jpg";
 import shirt4 from "../assets/shirt4.jpg";
+import shirt5 from "../assets/shirt5.jpg";
 import  product1 from "../assets/product1.jpg";
 import  product2 from "../assets/product2.jpg";
 import  seller1 from "../assets/seller1.png";
@@ -21,7 +22,9 @@ export const getProductDetails = () => {
       shirt1,
       shirt2,
     shirt3,
-    shirt4
+    shirt4,
+    shirt5
+
     ]
   });
 };

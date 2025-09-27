@@ -1,0 +1,421 @@
+/* General */
+.navbar {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Top Bar */
+.top-bar {
+  background: #0d3b66;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 40px;
+  font-size: 14px;
+  flex-wrap: wrap;
+}
+
+.top-bar .contact-info span {
+  margin-right: 10px;
+}
+
+.top-bar .actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.top-bar button {
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.top-bar button:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.list-btn {
+  background: white !important;
+  color: #0d3b66 !important;
+  font-weight: bold;
+}
+
+.list-btn:hover {
+  background: #f0f0f0 !important;
+}
+
+/* Main Nav */
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+}
+
+/* Nav Links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0 auto;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.nav-links li {
+  display: inline-block;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 5px 0;
+  transition: color 0.2s;
+  white-space: nowrap;
+  display: block;
+}
+
+.nav-links a:hover {
+  /* color: #000000; */
+}
+
+.nav-links a.active {
+  font-weight: bold;
+  color: #000;
+}
+
+/* Search Section - SMALLER SIZE FOR DESKTOP */
+.search-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: nowrap;
+  min-width: 0;
+}
+
+.search-section input {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 13px;
+  transition: border-color 0.2s;
+  min-width: 100px;
+  flex-shrink: 1;
+  height: 32px;
+}
+
+.search-section input:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  flex-shrink: 1;
+  min-width: 0;
+}
+
+.search-box input {
+  border-radius: 4px 0 0 4px;
+  border-right: none;
+  min-width: 20px;
+  max-width: 50px; /* Prevents it from getting too wide */
+  flex: 1;
+}
+
+.search-btn {
+  background: #ff6600;
+  border: none;
+  padding: 7px 12px;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  color: white;
+  font-size: 14px;
+  transition: background-color 0.2s;
+  flex-shrink: 0;
+  height: 32px;
+}
+
+.search-btn:hover {
+  background: #e55b00;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 5px;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1200px) {
+  .nav-links {
+    gap: 20px;
+  }
+  
+  .search-section {
+    gap: 6px;
+  }
+  
+  .search-box input {
+    min-width: 130px;
+  }
+}
+
+@media (max-width: 992px) {
+  .main-nav {
+    padding: 12px 20px;
+    gap: 15px;
+  }
+  
+  .top-bar {
+    padding: 8px 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 15px;
+    background: #fff;
+    border-top: 1px solid #eee;
+    padding: 0;
+    text-align: left;
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+  }
+
+  .nav-links.open {
+    max-height: 500px;
+    opacity: 1;
+    padding: 15px 0;
+  }
+
+  .nav-links li {
+    display: block;
+    width: 100%;
+  }
+
+  .nav-links a {
+    padding: 12px 20px;
+    border-bottom: 1px solid #f0f0f0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .nav-links a:hover {
+    background-color: #f9f9f9;
+  }
+
+  .nav-links a:last-child {
+    border-bottom: none;
+  }
+
+  .hamburger {
+    display: block;
+    order: 1;
+  }
+
+  .logo {
+    order: 0;
+  }
+
+  /* Search section stays in one row */
+  .search-section {
+    order: 2;
+    flex-direction: row;
+    width: auto;
+    margin-top: 0;
+    gap: 6px;
+    flex-wrap: nowrap;
+    flex: 1;
+    justify-content: flex-end;
+    max-width: 350px;
+  }
+
+  .search-section input {
+    min-width: 90px;
+    flex: 1;
+    height: 36px;
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  .search-box {
+    flex: 2;
+    min-width: 130px;
+  }
+
+  .search-btn {
+    height: 36px;
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    order: 0;
+    flex: 0 0 auto;
+  }
+
+  .hamburger {
+    order: 1;
+    flex: 0 0 auto;
+  }
+
+  .nav-links {
+    order: 3;
+  }
+
+  /* Search section stays compact and in one row */
+  .search-section {
+    order: 2;
+    flex: 1 1 auto;
+    min-width: 0;
+    margin: 10px 0 0 0;
+    gap: 5px;
+    max-width: none;
+  }
+
+  .search-section input {
+    min-width: 70px;
+    font-size: 12px;
+    padding: 6px 8px;
+    height: 34px;
+  }
+
+  .search-box input {
+    min-width: 110px;
+  }
+
+  .search-btn {
+    padding: 6px 10px;
+    height: 34px;
+  }
+}
+
+@media (max-width: 576px) {
+  .top-bar {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+    padding: 10px;
+  }
+  
+  .top-bar .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .top-bar .contact-info span {
+    margin-right: 0;
+  }
+
+  .top-bar .actions {
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .main-nav {
+    padding: 10px;
+    gap: 10px;
+  }
+  
+  .logo {
+    align-self: center;
+    margin-bottom: 0;
+  }
+
+  /* Ultra-compact search row for mobile */
+  .search-section {
+    flex-wrap: nowrap;
+    gap: 4px;
+    margin-top: 8px;
+    order: 2;
+    width: 100%;
+  }
+
+  .search-section input {
+    min-width: 60px;
+    font-size: 11px;
+    padding: 5px 6px;
+    flex: 1;
+    height: 32px;
+  }
+
+  .search-box {
+    flex: 2;
+  }
+
+  .search-box input {
+    min-width: 90px;
+  }
+
+  .search-btn {
+    height: 32px;
+  }
+
+  .nav-links a {
+    padding: 15px 20px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 400px) {
+  .search-section {
+    gap: 2px;
+  }
+  
+  .search-section input {
+    min-width: 50px;
+    font-size: 10px;
+    padding: 4px 5px;
+    height: 30px;
+  }
+  
+  .search-section input::placeholder {
+    font-size: 9px;
+  }
+  
+  .search-box input {
+    min-width: 70px;
+  }
+  
+  .search-btn {
+    height: 30px;
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+}

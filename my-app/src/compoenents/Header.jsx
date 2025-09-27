@@ -25,7 +25,7 @@ const Header = () => {
             List Your Business
           </button>
           <button className="auth-btn" aria-label="Sign in or sign up">
-            Sign In / Sign Up
+            Sign In / Sign Up {"->]"}
           </button>
           <button className="help-btn" aria-label="Get help">
             Need Help?

@@ -14,7 +14,7 @@ function App() {
 
       <Router>
       <Routes>
-        <Route path="/" element={<ProductOverview />} />
+        <Route path="" element={<ProductOverview />} />
            <Route path="/quote" element={<QuotePage />} />
       </Routes>
     </Router>
